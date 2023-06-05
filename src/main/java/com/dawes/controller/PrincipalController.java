@@ -17,6 +17,7 @@ import com.dawes.seguridadService.ServicioUsuarioRol;
 import jakarta.servlet.http.HttpServletRequest;
 
 @Controller
+@RequestMapping("/")
 public class PrincipalController {
 	
 	@Autowired
@@ -26,10 +27,14 @@ public class PrincipalController {
 	@Autowired
 	ServicioRol sr;
 	
+	@RequestMapping("/")
+	public String Principal01() {
+		return "main/principal";
+	}
 	
 	@RequestMapping("/principal")
 	public String Principal() {
-		return "/main/principal";
+		return "main/principal";
 	}
 	
 	@RequestMapping("/admin")
@@ -50,12 +55,12 @@ public class PrincipalController {
 
 	@RequestMapping("/login")
 	public String loginr() {
-		return"/main/login";
+		return"main/login";
 	}
 	
 	@RequestMapping("/logout")
 	public String logout() {
-		return "/main/principal";
+		return "main/principal";
 	}
 	
 	@RequestMapping("/register")
@@ -83,7 +88,7 @@ public class PrincipalController {
 	@RequestMapping("/salir")
 	public String salir(HttpServletRequest request) {
 		request.getSession(true).invalidate();
-		return "/main/principal";
+		return "main/principal";
 	}
 }
 

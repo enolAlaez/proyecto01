@@ -138,7 +138,7 @@ public class ArbolController {
 	public String forminsertarrepo(@RequestParam("idarbol") int idarbol, Model modelo) {
 		modelo.addAttribute("idarbol", idarbol);
 		modelo.addAttribute("repo", new ReposicionVO());
-		return "/arbol/formArbolRepo";
+		return "arbol/formArbolRepo";
 	}
 	
 	@RequestMapping("/insertarRepos")
@@ -238,7 +238,7 @@ public class ArbolController {
 	public String forminsertarrepous(@RequestParam("idarbol") int idarbol, Model modelo) {
 		modelo.addAttribute("idarbol", idarbol);
 		modelo.addAttribute("repo", new ReposicionVO());
-		return "/arbol/user/formArbolRepous";
+		return "arbol/user/formArbolRepous";
 	}
 	
 	@RequestMapping("/user/insertarReposus")
