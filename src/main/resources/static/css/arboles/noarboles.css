@@ -1,0 +1,15 @@
+@charset "ISO-8859-1";
+
+.main>a{
+	margin-bottom:30px;
+	width: 220px;
+	height: 40px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-size:1.1em;
+}
+
+h1{
+	margin-bottom:35px;
+}

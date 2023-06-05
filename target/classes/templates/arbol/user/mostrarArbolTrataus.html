@@ -1,0 +1,94 @@
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<link rel="stylesheet" href="/css/arboles/arbolestrata.css"
+	type="text/css" media="screen">
+<link rel="stylesheet" href="/css/arboles/arboles.css" type="text/css"
+	media="screen">
+<body>
+	<div class="overheader">
+		<img src="/images/invlogo1clear2.png">
+		<div>
+			<a th:href="@{/salir}">Cerrar Sesion</a>
+			<div>
+				<p>R</p>
+			</div>	
+		</div>
+	</div>
+	<header>
+			<a href="/fincas/user/mostrarus">Fincas</a>
+		<a href="/variedades/user/mostrarus">Variedades</a>
+		<a href="/tratamientos/user/mostrarus">Tratamientos</a>
+		<a href="/recolecciones/user/mostrarus">Recolecciones</a>
+	</header>
+
+	<div class="main">
+		<div class="titles">
+			<h2 th:text="'Arbol de '+${arbol.finca.denom}"></h2>
+			<h2 th:text="'Fila: '+${arbol.fila}+' / Columna: '+${arbol.columna}"></h2>
+		</div>
+		<div class="atribs">
+			<div class="atrib">
+				<p>Fecha</p>
+				<p th:text="${arbol.fecha}"></p>
+			</div>
+			<div class="atrib">
+				<p>Variedad</p>
+				<p th:text="${arbol.variedad.nombre}"></p>
+			</div>
+			<div class="atrib">
+				<p>Estado</p>
+				<p th:text="${arbol.estado}"></p>
+			</div>
+		</div>
+		<div class="cosas">
+			<div class="tratamientos">
+				<p>TRATAMIENTOS</p>
+
+				<div class="tratamiento">
+					<a
+						th:href="@{'/arboles/user/formularioArbolTrataus?idarbol='+${arbol.idarbol}}">Nuevo
+						Tratamiento</a>
+
+					<table>
+						<tr>
+							<th>Nombre</th>
+							<th>Fecha</th>
+						</tr>
+						<tr th:each="trat: ${arbol.tratamientos}">
+							<td th:text="${trat.tratamiento.nombre}" />
+							<td th:text="${trat.fecha}" />
+						</tr>
+
+					</table>
+				</div>
+			</div>
+			<div class="reposiciones">
+				<p>REPOSICIONES</p>
+
+				<div class="reposicion">
+					<a
+						th:href="@{'/arboles/user/formularioArbolReposus?idarbol='+${arbol.idarbol}}">Nueva
+						Reposicion </a>
+
+					<table>
+						<tr>
+							<th>Causa</th>
+							<th>Fecha</th>
+
+						</tr>
+						<tr th:each="repo: ${arbol.reposiciones}">
+							<td th:text="${repo.causa}" />
+							<td th:text="${repo.fecha}" />
+						</tr>
+
+					</table>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+</html>

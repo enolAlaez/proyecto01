@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/general/generalform.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/css/main/register.css" type="text/css" media="screen">
+<script src="/scripts/register.js"></script>
+</head>
+<body>
+<div class="overheader">
+			<img src="/images/invlogo1clear2.png">
+		</div>
+	<div class="main">
+		<h1>Registrate</h1>
+		<form onsubmit="return check()"method="post" th:action="@{/signup}" th:object=${usuario}>
+			<p>Usuario:</p>
+			<input type="text" th:field="*{username}" required>
+
+			<P>Contraseña:</P>
+			<input class="pass1"type="password" th:field="*{password}" required>
+			
+			<P>Confirmar Contraseña:</P>
+			<input class="pass2" type="password">
+			<small class="checker"></small>
+			 
+			<div class="sub">
+				<input type="submit" value="Registrarse">
+				<a href="/main/principal">Volver</a>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

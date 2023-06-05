@@ -1,0 +1,17 @@
+@charset "ISO-8859-1";
+
+form>p{
+	margin-bottom:0px;
+}
+
+h1{
+	height:90px;
+}
+
+form>p:nth-child(5){
+	margin-bottom:-15px;
+}
+
+form>p:nth-child(6){
+	font-size:0.9em;
+}

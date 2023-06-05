@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/general/general.css" type="text/css"
+	media="screen">
+<link rel="stylesheet" href="/css/recos/recos.css" type="text/css"
+	media="screen">
+</head>
+<body>
+	<div class="overheader">
+		<img src="/images/invlogo1clear2.png">
+		<div>
+			<a th:href="@{/salir}">Cerrar Sesion</a>
+			<div>
+				<p>A</p>
+			</div>
+		</div>
+	</div>
+	<header>
+		<a href="/fincas/mostrar">Fincas</a> <a href="/variedades/mostrar">Variedades</a>
+		<a href="/tratamientos/mostrar">Tratamientos</a> <a
+			href="/recolecciones/mostrar">Recolecciones</a>
+	</header>
+	<div class="main">
+		<h1>RECOLECCIONES</h1>
+		<a th:href="@{/recolecciones/formulario}">Insertar Nuevo</a>
+		<table>
+			<tr>
+				<th>Finca</th>
+				<th>Variedad</th>
+				<th>Kilos</th>
+				<th>Fecha</th>
+			</tr>
+			<tr th:each="rec: ${reco}">
+				<td th:text="${rec.finca.denom}" />
+				<td th:text="${rec.variedad.nombre}" />
+				<td th:text="${rec.kilos}+' Kg'" />
+				<td th:text="${rec.fecha}" />
+				<td><a
+					th:href="@{'/recolecciones/formulariomodif?idreco='+${rec.idrecoleccion}}">Modificar</a></td>
+				<td><a
+					th:href="@{'/recolecciones/eliminar?idreco='+${rec.idrecoleccion}}">Eliminar</a></td>
+			</tr>
+
+
+		</table>
+	</div>
+
+</body>
+</html>

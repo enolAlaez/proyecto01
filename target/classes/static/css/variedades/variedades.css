@@ -1,0 +1,5 @@
+@charset "ISO-8859-1";
+
+header > a:nth-child(2){
+	border-color:#C9E3AC;
+}

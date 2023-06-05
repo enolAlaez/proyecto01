@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/main/principal.css" type="text/css" media="screen">
+</head>
+<body>
+	<header>
+			
+			<div>
+				<img src="/images/invlogo1clear.png">
+			</div>
+			<div class="logs">
+				<a th:href="@{/admin}">Administrador</a> 
+				<a th:href="@{/user}">Registrado</a>
+			</div>
+		</header>
+
+		<div class="main">
+			<div>
+				<img src="/images/logomain.png">
+			</div>
+			<section>
+				<p> Nuestra misión es llevar al mercado las sidras de mejor sabor y alta calidad, utilizando solo los ingredientes más frescos de origen local. Nuestras sidras se elaboran en lotes pequeños, lo que garantiza el más alto nivel de atención al detalle y al sabor. Nos apasiona brindar una experiencia única y placentera a nuestros clientes, y estamos ansiosos por compartir nuestras sidras con usted.</p>
+			</section>
+			<div class="aboutus">
+				<a th:href="@{/salir}">Sobre Nosotros</a>
+			</div>
+			
+			<div class="footer">
+				<p></p>
+			</div>
+		</div>
+
+</body>
+</html>

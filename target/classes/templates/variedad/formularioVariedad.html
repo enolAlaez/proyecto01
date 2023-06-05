@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/general/generalform.css"
+	type="text/css" media="screen">
+<link rel="stylesheet" href="/css/variedades/variedadesform.css"
+	type="text/css" media="screen">
+<link rel="stylesheet" href="/css/variedades/variedades.css"
+	type="text/css" media="screen">
+</head>
+<body>
+	<div class="overheader">
+		<img src="/images/invlogo1clear2.png">
+		<div>
+				<a th:href="@{/salir}">Cerrar Sesion</a>
+				<div>
+					<p>A</p>
+				</div>	
+			</div>
+	</div>
+	<header>
+		<a href="/fincas/mostrar">Fincas</a> <a href="/variedades/mostrar">Variedades</a>
+		<a href="/tratamientos/mostrar">Tratamientos</a>
+		<a href="/recolecciones/mostrar">Recolecciones</a>
+	</header>
+	<div class="main">
+		<h1>Nueva Variedad</h1>
+		<form method="post" th:action="@{/variedades/insertar}" th:object=${variedad}>
+			<p>Nombre:</p>
+				<input type="text" th:field="*{nombre}" required>
+			<p>Color:</p>
+			<select th:field="*{color}" required>
+				<option value="red">rojo</option>
+				<option value="green">verde</option>
+				<option value="pink">rosa</option>
+				<option value="yellow">amarillo</option>
+				<option value="blue">azul</option>
+				<option value="indigo">Morado</option>
+				<option value="orange">naranja</option>
+				<option value="brown">marron</option>
+				<option value="cyan">cian</option>
+				<option value="bisque">beige</option>
+				<option value="khaki">khaki</option>
+			</select>
+
+			<div class="sub">
+				<input type="submit" value="insertar"> 
+				<a href="/variedades/mostrar">Volver</a>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

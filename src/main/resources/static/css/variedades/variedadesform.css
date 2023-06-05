@@ -1,0 +1,23 @@
+@charset "ISO-8859-1";
+
+h1{
+	background-color:#C9E3AC;
+}
+
+.sub{
+	margin-top:30px;
+}
+
+form>p{
+	margin-bottom:0px;
+}
+
+select{
+	width:100%;
+	text-align:center;
+	height:20px;
+}
+h1{
+	height:90px;
+}
+

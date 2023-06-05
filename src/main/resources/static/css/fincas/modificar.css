@@ -1,0 +1,24 @@
+@charset "ISO-8859-1";
+
+.sub{
+	margin-top:30px;
+}
+
+input{
+	width:90%;
+	height:20px;
+}
+
+.rare{
+	font-size:0.8em;
+	margin-top:-1px;
+	margin-bottom:0px;
+}
+
+form{
+	width:77%;
+}
+
+h1{
+	height:90px;
+}

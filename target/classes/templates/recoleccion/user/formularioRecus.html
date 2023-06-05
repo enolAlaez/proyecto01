@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/general/generalform.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/css/recos/recos.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/css/recos/formrecos.css" type="text/css" media="screen">
+</head>
+<body>
+	<div class="overheader">
+		<img src="/images/invlogo1clear2.png">
+		<div>
+				<a th:href="@{/salir}">Cerrar Sesion</a>
+				<div>
+					<p>R</p>
+				</div>	
+			</div>
+	</div>
+	<header>
+				<a href="/fincas/user/mostrarus">Fincas</a>
+		<a href="/variedades/user/mostrarus">Variedades</a>
+		<a href="/tratamientos/user/mostrarus">Tratamientos</a>
+		<a href="/recolecciones/user/mostrarus">Recolecciones</a>
+	</header>
+	
+	<div class="main">
+		<h1>Nueva Recoleccion</h1>
+		<form method="post" th:action="@{/recolecciones/user/insertarus}" th:object=${reco}>
+			<p>Finca</p>
+			<select th:field="*{idfinca}" required>
+				<option th:each="finca: ${fincas}"
+					th:value="${finca.idfinca}" th:text="${finca.denom}" />
+			</select>
+
+
+			<p>Variedad:</p>
+			<select th:field="*{idvariedad}" required>
+				<option th:each="variedad: ${variedades}"
+					th:value="${variedad.idvariedad}" th:text="${variedad.nombre}" />
+			</select>
+			
+			<p>Kilos</p>
+			<input type="number" th:field="*{kilos}" min="1" required/>
+			
+			<p></p>
+			<div class="sub">
+				<input type="submit" value="Insertar">
+				<a href="/recolecciones/user/mostrarus">Volver</a>
+			</div>
+			
+		</form>
+	</div>
+
+</body>
+</html>
