@@ -79,7 +79,7 @@ public class PrincipalController {
 		System.out.print(usuario);
 		usuario.setPassword(new BCryptPasswordEncoder().encode(usuario.getPassword()));
 		su.save(usuario);
-		sur.save(new UsuarioRolVO(1, usuario, sr.findById(11).get()));
+		sur.save(new UsuarioRolVO(0, usuario, sr.findById(11).get()));
 		return "main/login";
 	}
 	

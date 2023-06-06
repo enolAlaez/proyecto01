@@ -2,7 +2,7 @@
 <html xmlns:th="www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Sicerastur</title>
 <link rel="stylesheet" href="/css/general/generalform.css" type="text/css" media="screen">
 <link rel="stylesheet" href="/css/main/register.css" type="text/css" media="screen">
 <script src="/scripts/register.js"></script>
@@ -13,7 +13,7 @@
 		</div>
 	<div class="main">
 		<h1>Registrate</h1>
-		<form onsubmit="return check()"method="post" th:action="@{/signup}" th:object=${usuario}>
+		<form onsubmit="return check()" method="post" th:action="@{/signup}" th:object=${usuario}>
 		
 			<p>Usuario:</p>
 			<input type="text" th:field="*{username}" required>
