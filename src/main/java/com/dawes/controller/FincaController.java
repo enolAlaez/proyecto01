@@ -108,7 +108,7 @@ public class FincaController {
 		if(fs.findById(idfinca).get().getArbol().isEmpty()==true) {
 			System.out.println(fs.findById(idfinca).get());
 			modelo.addAttribute("erfinca", fs.findById(idfinca).get());
-			return "arbol/noArbolesError";
+			return "arbol/user/noArbolesErrorus";
 		}
 		
 		for(int i=0; i<fs.findById(idfinca).get().getArbol().size(); i++) {

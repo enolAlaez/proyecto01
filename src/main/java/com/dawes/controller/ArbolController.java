@@ -161,7 +161,7 @@ public class ArbolController {
 		if(modelo.toString().length() < 11) {
 			System.out.println(fs.findById(idfinca).get());
 			modelo.addAttribute("erfinca", fs.findById(idfinca).get());
-			return "arbol/noArbolesError";
+			return "arbol/user/noArbolesErrorus";
 		}
 		return "arbol/user/mostrarArbolus";
 	}

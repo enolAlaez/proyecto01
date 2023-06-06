@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="/css/general/generalform.css" type="text/css" media="screen">
 <link rel="stylesheet" href="/css/tratamientos/tratamientosform.css" type="text/css" media="screen">
 <link rel="stylesheet" href="/css/tratamientos/tratamientomodif.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/css/tratamientos/tratamientos.css" type="text/css" media="screen">
 </head>
 <body>
 	<div class="overheader">
@@ -23,7 +24,7 @@
 		<a href="/recolecciones/mostrar">Recolecciones</a>
 	</header>
 	<div class="main">
-		<h1 th:text="'Modificar variedad '+${tratam.nombre}"></h1>
+		<h1 th:text="'Modificar Tratamiento '+${tratam.nombre}"></h1>
 		
 
 			<form method="post" th:action="@{/tratamientos/modificar}" th:object="${tratam}">

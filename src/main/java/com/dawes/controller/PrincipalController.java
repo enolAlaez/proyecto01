@@ -47,7 +47,6 @@ public class PrincipalController {
 		return"user/regis";
 	}
 
-	//No hace falta al estar en una carpeta error /403.html va solo
 	@RequestMapping("/403")
 	public String error403() {
 		return"error/403";

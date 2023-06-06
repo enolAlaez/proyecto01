@@ -18,3 +18,15 @@ form>select{
 h1{
 	height:70px;
 }
+
+
+
+.titles{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+	background-color:#EAEFBD;
+	width:100%;
+}
+
