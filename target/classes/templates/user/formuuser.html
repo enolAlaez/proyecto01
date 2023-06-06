@@ -14,6 +14,7 @@
 	<div class="main">
 		<h1>Registrate</h1>
 		<form onsubmit="return check()"method="post" th:action="@{/signup}" th:object=${usuario}>
+		
 			<p>Usuario:</p>
 			<input type="text" th:field="*{username}" required>
 

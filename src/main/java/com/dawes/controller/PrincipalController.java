@@ -73,14 +73,13 @@ public class PrincipalController {
 		return "user/formuuser";
 	}
 	
-	
 	@RequestMapping("/signup")
 	public String insertar(Model modelo, @ModelAttribute UsuarioVO usuario) {
 		System.out.print("prueba");
 		System.out.print(usuario);
 		usuario.setPassword(new BCryptPasswordEncoder().encode(usuario.getPassword()));
 		su.save(usuario);
-		sur.save(new UsuarioRolVO(0, usuario, sr.findById(2).get()));
+		sur.save(new UsuarioRolVO(1, usuario, sr.findById(11).get()));
 		return "main/login";
 	}
 	
